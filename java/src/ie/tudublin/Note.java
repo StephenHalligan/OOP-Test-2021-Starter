@@ -12,10 +12,15 @@ public class Note
 
     }
 
+    public int getDuration() {
+
+        return duration;
+    }
+
     public String toString() {
 
         return note+ " " +duration;  
-        
+
     }
 
 

@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import processing.core.PApplet;
 
 public class ScoreDisplay extends PApplet {
-	
-	String score = "DEFGABcd";
-	//String score = "D2E2F2G2A2B2c2d2";
+
+	//String score = "DEFGABcd";
+	String score = "D2E2F2G2A2B2c2d2";
 	//String score = "DEF2F2F2EFA2A2B2AFD2E2D2D2D2";
 
 	ArrayList <Note> noteList = new ArrayList<Note>();
@@ -17,7 +17,11 @@ public class ScoreDisplay extends PApplet {
 
 		for(int i = 0; i < score.length(); i++) {
 			Note note = new Note(score.charAt(i), 1);
-			noteList.add(note);
+			Duration duration = new Duration(score.charAt(i+1),0);
+			if(score.charAt(i) != '2') {
+				noteList.add(note);
+				System.out.println("!2 working");
+			}
 
 		}
 	}
@@ -46,6 +50,8 @@ public class ScoreDisplay extends PApplet {
 		loadScore();
 		printScores();
 
+		drawNotes();
+
 	}
 
 	public void draw() {
@@ -70,7 +76,42 @@ public class ScoreDisplay extends PApplet {
 
 	void drawNotes() {
 
+		for(int i = 0; i < noteList.size(); i++) {
+			//Note note = new Note(score.charAt(i), 1);
+			//System.out.println(noteList.get(i).toString());
+
+			String currNote = noteList.get(i).toString().substring(0, noteList.get(i).toString().indexOf(" ")); 
+
+			/*switch(currNote) {
+				case "D":
+					System.out.println("WORKIN");
+					break;
+				case "E 1":
+					System.out.println("f");
+					break;
+				case "F 1":
+					System.out.println("f");
+					break;
+				case "G 1":
+					System.out.println("f");
+					break;
+				case "A 1":
+					System.out.println("f");
+					break;
+				case "B 1":
+					System.out.println("f");
+					break;
+				case "c 1":
+					System.out.println("f");
+					break;
+				case "d 1":
+					System.out.println("f");
+					break;
+
+				
+
+			}*/
+		}
+
 	}
-
-
 }
