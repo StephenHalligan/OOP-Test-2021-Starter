@@ -8,19 +8,32 @@ import processing.core.PApplet;
 public class ScoreDisplay extends PApplet {
 
 	//String score = "DEFGABcd";
-	String score = "D2E2F2G2A2B2c2d2";
+	String score = "D1E2F2G2A2B2c2d2";
 	//String score = "DEF2F2F2EFA2A2B2AFD2E2D2D2D2";
 
 	ArrayList <Note> noteList = new ArrayList<Note>();
 
 	public void loadScore() {
 
+
 		for(int i = 0; i < score.length(); i++) {
-			Note note = new Note(score.charAt(i), 1);
-			Duration duration = new Duration(score.charAt(i+1),0);
-			if(score.charAt(i) != '2') {
-				noteList.add(note);
-				System.out.println("!2 working");
+			
+			int duration = 1;
+
+			if(i+1 != score.length()) {
+				if(score.charAt(i+1) == '2' && i < score.length()) {
+					duration = 2;
+				}
+				else {
+					duration = 1;
+				}
+			}
+	
+			Note note = new Note(score.charAt(i), duration);
+			noteList.add(note);
+
+			if(score.charAt(i) == '2') {
+				noteList.remove(note);
 			}
 
 		}

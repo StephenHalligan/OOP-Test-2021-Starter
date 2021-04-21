@@ -13,8 +13,11 @@ public class Note
     }
 
     public int getDuration() {
-
         return duration;
+    }
+
+    public char getNote() {
+        return note;
     }
 
     public String toString() {
