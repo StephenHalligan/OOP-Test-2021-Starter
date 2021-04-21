@@ -20,6 +20,14 @@ public class ScoreDisplay extends PApplet
 		}
 	}
 
+	public void printScores() {
+
+		String typeOfNote = "Quaver";
+		for(Note note : noteList) {
+			System.out.println(note.toString()+" "+typeOfNote);
+		}
+	}
+
 	public void settings()
 	{
 		size(1000, 500);
@@ -32,7 +40,8 @@ public class ScoreDisplay extends PApplet
 
 	public void setup() 
 	{
-		
+		loadScore();
+		printScores();
 	}
 
 	public void draw()
