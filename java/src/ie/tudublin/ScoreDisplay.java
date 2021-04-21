@@ -11,6 +11,15 @@ public class ScoreDisplay extends PApplet
 	//String score = "D2E2F2G2A2B2c2d2";
 	//String score = "DEF2F2F2EFA2A2B2AFD2E2D2D2D2";
 
+	ArrayList <Note> noteList = new ArrayList<Note>();
+
+	public void loadScore() {
+		for(int i = 0; i < score.length(); i++) {
+			Note note = new Note(score.charAt(i), 1);
+			noteList.add(note);
+		}
+	}
+
 	public void settings()
 	{
 		size(1000, 500);
