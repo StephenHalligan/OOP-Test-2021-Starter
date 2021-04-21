@@ -7,8 +7,8 @@ import processing.core.PApplet;
 
 public class ScoreDisplay extends PApplet {
 
-	String score = "DEFGABcd";
-	//String score = "D2E2F2G2A2B2c2d2";
+	//String score = "DEFGABcd";
+	String score = "D2E2F2G2A2B2c2d2";
 	//String score = "DEF2F2F2EFA2A2B2AFD2E2D2D2D2";
 
 	ArrayList <Note> noteList = new ArrayList<Note>();
@@ -102,47 +102,55 @@ public class ScoreDisplay extends PApplet {
 		float xPos = width/2-width/3f;
 		int size = 22;
 		for(int i = 0; i < noteList.size(); i++) {
-
+			textSize(26);
 			switch(noteList.get(i).toString()) {
 				case "D 2":
 					ellipse(xPos, height/2-height/5+112.5f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+112.5f, xPos+size/2, height/2-height/3+112.5f);
+					text("D", xPos, height/2-height/3);
 					break;
 				case "E 2":
 					ellipse(xPos, height/2-height/5+100f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+100, xPos+size/2, height/2-height/3+100);
+					text("E", xPos, height/2-height/4);
 					break;
 				case "F 2":
 					ellipse(xPos, height/2-height/5+87.5f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+87.5f, xPos+size/2, height/2-height/3+87.5f);
+					text("F", xPos, height/2-height/4);
 					break;
 				case "G 2":
 					ellipse(xPos, height/2-height/5+75f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+75f, xPos+size/2, height/2-height/3+75f);
+					text("G", xPos, height/2-height/4);
 					break;
 				case "A 2":
 					ellipse(xPos, height/2-height/5+62.5f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+62.5f, xPos+size/2, height/2-height/3+62.5f);
+					text("A", xPos, height/2-height/4);
 					break;
 				case "B 2":
 					ellipse(xPos, height/2-height/5+50f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+50f, xPos+size/2, height/2-height/3+50f);
+					text("B", xPos, height/2-height/4);
 					break;
 				case "c 2":
 					ellipse(xPos, height/2-height/5+37.5f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+37.5f, xPos+size/2, height/2-height/3+37.5f);
+					text("c", xPos, height/2-height/4);
 					break;
 				case "d 2":
 					ellipse(xPos, height/2-height/5+25f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+25f, xPos+size/2, height/2-height/3+25f);
+					text("d", xPos, height/2-height/4);
 					break;
 
 
@@ -151,42 +159,56 @@ public class ScoreDisplay extends PApplet {
 					fill(0);
 					line(xPos+size/2, height/2-height/5+112.5f, xPos+size/2, height/2-height/3+112.5f);
 					line(xPos+size/2, height/2-height/3+112.5f, xPos+size/2+15, height/2-height/3+125f);
+					text("D", xPos, height/2-height/4);
 					break;
 				case "E 1":
 					ellipse(xPos, height/2-height/5+100f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+100, xPos+size/2, height/2-height/3+100);
 					line(xPos+size/2, height/2-height/3+100, xPos+size/2+15, height/2-height/3+112.5f);
+					text("E", xPos, height/2-height/4);
 					break;
 				case "F 1":
 					ellipse(xPos, height/2-height/5+87.5f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+87.5f, xPos+size/2, height/2-height/3+87.5f);
+					line(xPos+size/2, height/2-height/3+87.5f, xPos+size/2+15, height/2-height/3+100f);
+					text("F", xPos, height/2-height/4);
 					break;
 				case "G 1":
 					ellipse(xPos, height/2-height/5+75f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+75f, xPos+size/2, height/2-height/3+75f);
+					line(xPos+size/2, height/2-height/3+75, xPos+size/2+15, height/2-height/3+87.5f);
+					text("G", xPos, height/2-height/4);
 					break;
 				case "A 1":
 					ellipse(xPos, height/2-height/5+62.5f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+62.5f, xPos+size/2, height/2-height/3+62.5f);
+					line(xPos+size/2, height/2-height/3+62.5f, xPos+size/2+15, height/2-height/3+75);
+					text("A", xPos, height/2-height/4);
 					break;
 				case "B 1":
 					ellipse(xPos, height/2-height/5+50f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+50f, xPos+size/2, height/2-height/3+50f);
+					line(xPos+size/2, height/2-height/3+50, xPos+size/2+15, height/2-height/3+62.5f);
+					text("B", xPos, height/2-height/4);
 					break;
 				case "c 1":
 					ellipse(xPos, height/2-height/5+37.5f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+37.5f, xPos+size/2, height/2-height/3+37.5f);
+					line(xPos+size/2, height/2-height/3+37.5f, xPos+size/2+15, height/2-height/3+50);
+					text("c", xPos, height/2-height/4);
 					break;
 				case "d 1":
 					ellipse(xPos, height/2-height/5+25f, size, size);
 					fill(0);
 					line(xPos+size/2, height/2-height/5+25f, xPos+size/2, height/2-height/3+25f);
+					line(xPos+size/2, height/2-height/3+25, xPos+size/2+15, height/2-height/3+37.5f);
+					text("d", xPos, height/2-height/4);
 					break;
 
 				
